@@ -1,13 +1,18 @@
 import sqlite3
 
-conn = sqlite3.connect('database.db', check_same_thread=False)
-c = conn.cursor()
-c.execute('''CREATE TABLE IF NOT EXISTS fn_stats
-             (id INTEGER PRIMARY KEY,
-              chat_id INTEGER,
-              byudjet TEXT,
-              posled_rs TEXT,
-              tek_schet TEXT,
-              time_zp TEXT,
-               TEXT)''')
+conn = sqlite3.connect('finance_bot.db', check_same_thread=False)
+cursor = conn.cursor()
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY,
+        tg_id INTEGER,
+        budget INTEGER,
+        expense INTEGER,
+        last_purchase TEXT,
+        registration_date TEXT,
+        last_update_date TEXT,
+        is_registered INTEGER DEFAULT 0
+    )
+''')
 conn.commit()

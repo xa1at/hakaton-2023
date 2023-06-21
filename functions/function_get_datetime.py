@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 months_dict = {
     'January': 'января',
     'February': 'февраля',
@@ -16,6 +15,7 @@ months_dict = {
     'December': 'декабря'
 }
 
+
 def print_current_date():
     now = datetime.now()
     month = now.strftime("%B")
@@ -24,9 +24,9 @@ def print_current_date():
     day = now.strftime("%d")
     return f"{day} {month_ru} {year} года"
 
+
 def print_current_time():
     now = datetime.now()
     hours = now.strftime("%H")
     minutes = now.strftime("%M")
-    return f"{hours} часов, {minutes} минут"
-
+    return f"{hours}:{minutes}"

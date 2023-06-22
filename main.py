@@ -13,7 +13,7 @@ from tests_and_info.soveti_please import *
 
 logging.basicConfig(level=logging.INFO)
 
-bot = telebot.TeleBot('6040960208:AAEwPLomCRMCqtCAtQzKfl1tSh8jq7nYV1Y')
+bot = telebot.TeleBot('TOKEN_TG')
 
 
 @bot.message_handler(commands=['start'])

@@ -16,3 +16,17 @@ cursor.execute('''
     )
 ''')
 conn.commit()
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS rashodi (
+        id INTEGER PRIMARY KEY,
+        tg_id INTEGER,
+        cars INTEGER,
+        food INTEGER,
+        cloth TEXT,
+        cofe TEXT,
+        ucheba TEXT,
+        other TEXT
+    )
+''')
+conn.commit()

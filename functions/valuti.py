@@ -1,5 +1,5 @@
 from pycbrf.toolbox import ExchangeRates
-from datetime import datetime
+
 from functions.function_get_datetime import *
 
 ltime = datetime.now()
